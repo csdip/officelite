@@ -1,0 +1,67 @@
+@use "../utils/" as *;
+@use "../global/" as *;
+
+
+
+/* -------------------------------------
+            Header Desktop
+------------------------------------- */
+.header{
+    position: relative;
+
+    .bg-pattern{
+        position: absolute;
+        top: -310px;
+        right: -226px;
+        z-index: -1;
+        animation: rotate 180s infinite linear;
+    }
+
+    &__logo{
+        padding: 100px 0;
+    }
+
+    &__text-content{
+        h1{
+            font-size: 5.6rem;
+        }
+
+        p{
+            margin: 2rem 0;
+        }
+    }
+    &__img-container{
+        text-align: right;
+    }
+}
+
+
+@keyframes rotate {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+/* -------------------------------------
+            Header Tablet
+------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------
+            Header Mobile
+------------------------------------- */

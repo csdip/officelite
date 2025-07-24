@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh%20Sans:wght@400;600;700&display=swap");
+/* -------------------------------------
+             Template Fonts
+------------------------------------- */
+/* -------------------------------------
+            Template Colors
+------------------------------------- */
+.preloader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  z-index: 88;
+}
+
+@keyframes l5 {
+  0% {
+    box-shadow: 20px 0 #5175FF, -20px 0 rgba(0, 0, 0, 0.1333333333);
+    background: #5175FF;
+  }
+  33% {
+    box-shadow: 20px 0 #5175FF, -20px 0 rgba(0, 0, 0, 0.1333333333);
+    background: rgba(0, 0, 0, 0.1333333333);
+  }
+  66% {
+    box-shadow: 20px 0 rgba(0, 0, 0, 0.1333333333), -20px 0 #5175FF;
+    background: rgba(0, 0, 0, 0.1333333333);
+  }
+  100% {
+    box-shadow: 20px 0 rgba(0, 0, 0, 0.1333333333), -20px 0 #5175FF;
+    background: #5175FF;
+  }
+}
+.container-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  display: none !important;
+}
+
+*,
+*::after,
+*::before,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body,
+textarea,
+input {
+  font-size: 1.8rem;
+  line-height: 1;
+  font-family: "Kumbh sans", sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+  font-size: 3.4rem;
+  line-height: 1.2;
+  color: #333950;
+  font-weight: 700;
+  font-family: "Kumbh sans", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+p,
+span {
+  color: #747B95;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+button,
+.btn {
+  position: relative;
+  color: #ffffff;
+  background-color: #5175FF;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Kumbh sans", sans-serif;
+  border-radius: 10rem;
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  opacity: 0.8;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1.5rem;
+  justify-content: space-between;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-l-none {
+  display: none;
+}
+
+.d-m-none {
+  display: none;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-flow: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: end;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.fix {
+  overflow: hidden;
+}
+
+.fix-x {
+  overflow-x: hidden;
+}
+
+.fix-y {
+  overflow-y: hidden;
+}
+
+.clear {
+  clear: both;
+}
+
+.m-l-auto {
+  margin-left: auto;
+}
+
+.m-r-auto {
+  margin-right: auto;
+}
+
+.m-inline {
+  margin-inline: auto;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+.col {
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.col-2 {
+  width: 16.66%;
+  float: left;
+  padding: 0 1.5rem;
+}
+
+.col-3 {
+  width: 25%;
+  float: left;
+  padding: 0 1.5rem;
+}
+
+.col-4 {
+  width: 33.33%;
+  float: left;
+  padding: 0 1.5rem;
+}
+
+.col-5 {
+  width: 41.66%;
+  float: left;
+  padding: 0 1.5rem;
+}
+
+.col-6 {
+  width: 50%;
+  float: left;
+  padding: 0 1.5rem;
+}
+
+.col-7 {
+  width: 58.47%;
+  float: left;
+  padding: 0 1.5rem;
+}
+
+.col-8 {
+  width: 66.66%;
+  float: left;
+  padding: 0 1.5rem;
+}
+
+.col-9 {
+  width: 76.92%;
+  float: left;
+  padding: 0 1.5rem;
+}
+
+.col-10 {
+  width: 83.33%;
+  float: left;
+  padding: 0 1.5rem;
+}
+
+.col-11 {
+  width: 91.74%;
+  float: left;
+  padding: 0 1.5rem;
+}
+
+.col-12 {
+  width: 100%;
+  float: left;
+  padding: 0 1.5rem;
+}
+
+/* -------------------------------------
+    X-Large Screen 1920px & Above
+------------------------------------- */
+@media (min-width: 1360px) {
+  .container {
+    width: 1200px;
+  }
+}
+/* -------------------------------------
+        Large Screen 1440px
+------------------------------------- */
+/* -------------------------------------
+        Medium Screen 1200px
+------------------------------------- */
+/* -------------------------------------
+        Tablet Device 960px
+------------------------------------- */
+@media (max-width: 960px) {
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    width: 100%;
+  }
+}
+/* -------------------------------------
+        Mobile Device 768px
+------------------------------------- */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+/* -------------------------------------
+        Small Device 480px
+------------------------------------- */
+/* -------------------------------------
+            Mixin Desktop
+------------------------------------- */
+/* -------------------------------------
+            Mixin Tablet
+------------------------------------- */
+/* -------------------------------------
+            Mixin Mobile
+------------------------------------- */
+/* -------------------------------------
+            Header Desktop
+------------------------------------- */
+.header {
+  position: relative;
+}
+.header .bg-pattern {
+  position: absolute;
+  top: -310px;
+  right: -226px;
+  z-index: -1;
+  animation: rotate 180s infinite linear;
+}
+.header__logo {
+  padding: 100px 0;
+}
+.header__text-content h1 {
+  font-size: 5.6rem;
+}
+.header__text-content p {
+  margin: 2rem 0;
+}
+.header__img-container {
+  text-align: right;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* -------------------------------------
+            Header Tablet
+------------------------------------- */
+/* -------------------------------------
+            Header Mobile
+------------------------------------- */
+/* -------------------------------------
+            Plane Desktop
+------------------------------------- */
+.plane__single {
+  border-radius: 12px;
+  box-shadow: 0 14px 16px -4px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+}
+.plane__single--header {
+  margin-bottom: 4rem;
+}
+.plane__single--header h4 {
+  font-size: 2rem;
+}
+.plane__single--header h2 {
+  font-size: 5.6rem;
+  margin: 2rem 0 1rem 0;
+}
+.plane__single--body {
+  margin-bottom: 4rem;
+}
+.plane__single--body li {
+  font-size: 1.6rem;
+  color: #747B95;
+  margin-bottom: 3rem;
+}
+.plane__single .btn {
+  background-color: rgba(81, 117, 255, 0.2509803922);
+  color: #5175FF;
+}
+.plane__single.pro {
+  background-color: #5175FF;
+}
+.plane__single.pro h2, .plane__single.pro h4, .plane__single.pro li, .plane__single.pro p {
+  color: #ffffff;
+}
+.plane__single.pro .btn {
+  background-color: #ffffff;
+  color: #5175FF;
+}
+
+/* -------------------------------------
+            Plane Tablet
+------------------------------------- */
+/* -------------------------------------
+            Plane Mobile
+------------------------------------- *//*# sourceMappingURL=main.css.map */

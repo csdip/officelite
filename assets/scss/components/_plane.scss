@@ -1,0 +1,61 @@
+@use "../utils/" as *;
+@use "../global/" as *;
+
+/* -------------------------------------
+            Plane Desktop
+------------------------------------- */
+.plane {
+  &__single {
+    border-radius: 12px;
+    box-shadow: 0 14px 16px -4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+
+    &--header {
+      margin-bottom: 4rem;
+      h4 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 5.6rem;
+        margin: 2rem 0 1rem 0;
+      }
+    }
+
+    &--body {
+        margin-bottom: 4rem;
+      li {
+        font-size: 1.6rem;
+        color: $color-grey;
+        margin-bottom: 3rem;
+      }
+    }
+
+    .btn{
+        background-color: #5175FF40;
+        color: $color-primary;
+    }
+
+    &.pro{
+        background-color: $color-primary;
+
+        h2,h4,li,p{
+            color: $color-light;
+        }
+
+        .btn{
+            background-color: $color-light;
+            color: $color-primary;
+        }
+    }
+  }
+}
+
+/* -------------------------------------
+            Plane Tablet
+------------------------------------- */
+
+/* -------------------------------------
+            Plane Mobile
+------------------------------------- */

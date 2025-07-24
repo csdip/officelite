@@ -1,0 +1,79 @@
+
+
+// =============== Google Font Links ===============
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh%20Sans:wght@400;600;700&display=swap');
+
+
+
+/* -------------------------------------
+             Template Fonts
+------------------------------------- */
+
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+$f-f-kumbh: "Kumbh sans", sans-serif;
+
+
+
+
+
+
+/* -------------------------------------
+            Template Colors
+------------------------------------- */
+
+$color-dark: #000000;
+$color-light: #ffffff;
+$color-bg: #fafafa;
+$color-grey: #747B95;
+$color-primary: #5175FF;
+$color-secondary: #333950;
+$color-shade-blue: #25293A;
+$color-shade-blue-light: #333950;
+
+
+
+
+
+ 
+.preloader {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+  }
+
+  .loader-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $color-light;
+    width: 100vw;
+    height: 100vh;
+    z-index: 88;
+  }
+
+
+  @keyframes l5 {
+      0%  {box-shadow: 20px 0 $color-primary, -20px 0 #0002;background: $color-primary }
+      33% {box-shadow: 20px 0 $color-primary, -20px 0 #0002;background: #0002}
+      66% {box-shadow: 20px 0 #0002,-20px 0 $color-primary; background: #0002}
+      100%{box-shadow: 20px 0 #0002,-20px 0 $color-primary; background: $color-primary }
+  }
+
+
+  .container-hidden{
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: none !important;
+}
+
+

@@ -1,0 +1,108 @@
+@use "../utils/" as *;
+
+// =============== Global CSS ===============
+
+*,
+*::after,
+*::before,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body,
+textarea,
+input {
+  font-size: 1.8rem;
+  line-height: 1;
+  font-family: $f-f-kumbh;
+}
+
+body {
+  background-color: $color-bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+  font-size: 3.4rem;
+  line-height: 1.2;
+  color: $color-secondary;
+  font-weight: $bold;
+  font-family: $f-f-kumbh;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+p,
+span {
+  color: $color-grey;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+// section{
+//   margin-top: 80px;
+// }
+
+@mixin btn ($color, $bg){
+  position: relative;
+  color: $color-light;
+  background-color: $color-primary;
+  font-size: 1.6rem;
+  font-weight: $semibold;
+  font-family: $f-f-kumbh;
+  border-radius: 10rem;
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  overflow: hidden;
+  z-index: 1;
+  transition: all .3s ease
+}
+
+button,
+.btn {
+  @include btn($color-light, $color-primary);
+}
+
+button:hover,
+.btn:hover {
+  opacity: .8;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1.5rem;
+  justify-content: space-between;
+}

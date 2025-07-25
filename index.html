@@ -6,7 +6,7 @@
     <meta name="description" content="Office Lite is a litewegiht and modern ui lading page">
     <meta name="author" content="csdip">
     <!-- ===== Vendor Css Links ===== -->
-     <link rel="favicon" type="favicon/x-icon/short-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <!-- ===== Template Css Links ===== -->
@@ -18,7 +18,7 @@
 
 
     <!-- ============= HEADER ============= -->
-     <header id="header" class="header fix-x">
+     <header id="header" class="header fix">
         <img src="assets/img/bg-pattern-header.svg" alt="bg-pattern" class="bg-pattern">
         <div class="container">
             <div class="row">
@@ -27,15 +27,15 @@
                 </div>
             </div>
             <div class="row align-center">
-                <div class="col-6">
+                <div class="col-6 left">
                     <div class="header__text-content">
                         <h1>A simple solution to complex tasks is coming soon</h1>
                         <p>Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration platform built with an intuitive interface to improve productivity.</p>
                         <a href="#" class="btn">Get started</a>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="header__img-container">
+                <div class="col-6 right">
+                    <div class="header__img-content">
                         <img src="assets/img/illustration-charts.svg" alt="hero-img">
                     </div>
                 </div>
@@ -72,6 +72,7 @@
                     </div>
                     <div class="col-4">
                         <div class="plane__single pro">
+                            <img src="assets/img/bg-pattern-pricing.svg" alt="bg-pattern" class="bg-pattern">
                             <div class="plane__single--header">
                                 <h4>Pro</h4>
                                 <h2>$9.99</h2>
@@ -114,21 +115,23 @@
 
 
          <!-- ============= COMINGSOON ============= -->
-         <section id="commingsoon" class="commingsoon">
+         <section id="commingsoon" class="commingsoon fix">
+            <img src="assets/img/bg-pattern-footer.svg" alt="bg-pattern" class="bg-pattern">
             <div class="container">
-                <div class="row">
+                <div class="row align-center justify-between">
                     <div class="col-8">
                         <div class="commingsoon__timer">
                             <p class="date">Coming <span>10 Sep 2025</span></p>
-                            <div class="live-counting">
-                                <div class="days"><h3>47</h3><p>days</p></div>
-                                <div class="hours"><h3>07</h3><p>hours</p></div>
-                                <div class="min"><h3>39</h3><p>min</p></div>
-                                <div class="sec"><h3>51</h3><p>sec</p></div>
+                            <div class="live-counting d-flex align-center">
+                                <div class="counter"><h3 class="days">00</h3><p>days</p></div>
+                                <div class="counter"><h3 class="hours">00</h3><p>hours</p></div>
+                                <div class="counter"><h3 class="min">00</h3><p>min</p></div>
+                                <div class="counter"><h3 class="sec">00</h3><p>sec</p></div>
+                                <div class="counter ampm"><p class="am-pm">am</p></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 text-right">
                         <a href="#" class="btn">Get started</a>
                     </div>
                 </div>
@@ -154,8 +157,8 @@
     <!-- <div class="loader-container"><div class="preloader"></div></div>  -->
 
     <!-- ===== Vendor JS Links ===== -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <!-- ===== Main JS Link ===== -->
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

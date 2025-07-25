@@ -81,7 +81,8 @@ span {
   line-height: 1;
   overflow: hidden;
   z-index: 1;
-  transition: all .3s ease
+  transition: all .3s ease;
+  box-shadow: $box-shadow;
 }
 
 button,

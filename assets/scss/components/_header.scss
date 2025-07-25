@@ -1,67 +1,99 @@
 @use "../utils/" as *;
 @use "../global/" as *;
 
-
-
 /* -------------------------------------
             Header Desktop
 ------------------------------------- */
-.header{
-    position: relative;
+.header {
+  position: relative;
+  padding-bottom: 20rem;
+  .bg-pattern {
+    position: absolute;
+    top: -31rem;
+    right: -22.6rem;
+    z-index: -1;
+    animation: rotate 180s infinite linear;
+  }
 
-    .bg-pattern{
-        position: absolute;
-        top: -310px;
-        right: -226px;
-        z-index: -1;
-        animation: rotate 180s infinite linear;
+  &__logo {
+    padding: 8rem 0;
+  }
+
+  &__text-content {
+    h1 {
+      font-size: 5.6rem;
     }
 
-    &__logo{
-        padding: 100px 0;
+    p {
+      margin: 2rem 0;
     }
-
-    &__text-content{
-        h1{
-            font-size: 5.6rem;
-        }
-
-        p{
-            margin: 2rem 0;
-        }
-    }
-    &__img-container{
-        text-align: right;
-    }
+  }
+  &__img-content {
+    text-align: right;
+  }
 }
-
-
-@keyframes rotate {
-    from{
-        transform: rotate(0);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
-
-
-
-
 
 /* -------------------------------------
             Header Tablet
 ------------------------------------- */
+@include tablet {
+  .header {
+    .bg-pattern {
+        top: -28rem;
+        right: -37.6rem;
+      z-index: -1;
+      width: 100%;
+    }
 
-
-
-
-
-
-
-
-
+    &__text-content {
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
+    &__img-content {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
 
 /* -------------------------------------
             Header Mobile
 ------------------------------------- */
+@include mobile{
+    .header{
+        padding-bottom: 10rem;
+        .bg-pattern{
+            top: -22rem;
+            right: -25%;
+            transform: translateX(25%);
+            width: 150%;
+        }
+        &__logo {
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .left{
+            order: 2;
+        }
+        .right{
+            order: 1;
+        }
+        &__text-content{
+            text-align: center;
+
+            h1{
+                font-size: 3.8rem;
+            }
+        }
+        &__img-content{
+            width: 70%;
+            margin-inline: auto;
+            margin-bottom: 4rem;
+        }
+    }
+}

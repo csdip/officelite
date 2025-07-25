@@ -5,11 +5,17 @@
             Plane Desktop
 ------------------------------------- */
 .plane {
+  margin-bottom: -25rem;
+  position: relative;
+  z-index: 3;
+
   &__single {
-    border-radius: 12px;
-    box-shadow: 0 14px 16px -4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 16px;
+    box-shadow: $box-shadow;
     padding: 40px;
     text-align: center;
+    background-color: $color-light;
 
     &--header {
       margin-bottom: 4rem;
@@ -28,7 +34,10 @@
       li {
         font-size: 1.6rem;
         color: $color-grey;
-        margin-bottom: 3rem;
+        
+        &:not(:last-child){
+          margin-bottom: 3rem;
+        }
       }
     }
 
@@ -38,7 +47,17 @@
     }
 
     &.pro{
+        position: relative;
+        overflow: hidden;
         background-color: $color-primary;
+
+        .bg-pattern{
+          position: absolute;
+          top: -40.4rem;
+          left: 50%;
+          transform: translateX(-50%);
+          object-fit: cover;
+        }
 
         h2,h4,li,p{
             color: $color-light;
@@ -55,7 +74,51 @@
 /* -------------------------------------
             Plane Tablet
 ------------------------------------- */
+@include tablet{
+  .plane{
+    .col-4{
+      width: 100%;
+    }
+    &__single{
+      margin-bottom: 3rem;
+      text-align: left;
+      &--body{
+        position: absolute;
+        top: 50%;
+        right: 4rem;
+        transform: translateY(-50%);
+      }
+
+      &.pro{
+        .bg-pattern{
+          left: -32rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
 
 /* -------------------------------------
             Plane Mobile
 ------------------------------------- */
+@include mobile{
+  .plane{
+    &__single{
+      text-align: center;
+      &--body{
+        position: initial;
+        transform: none;
+      }
+
+      &.pro{
+        .bg-pattern{
+          top: -40rem;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

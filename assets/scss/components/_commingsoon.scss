@@ -1,0 +1,112 @@
+@use "../utils/" as *;
+@use "../global/" as *;
+
+/* -------------------------------------
+            Commingsoon Desktop
+------------------------------------- */
+.commingsoon {
+  background-color: $color-shade-blue;
+  padding: 35rem 0 10rem 0;
+  position: relative;
+  z-index: 1;
+
+  .bg-pattern {
+    position: absolute;
+    top: -60rem;
+    left: -46.6rem;
+    z-index: -1;
+    animation: rotate 180s infinite linear;
+  }
+
+  .date {
+    text-transform: uppercase;
+    font-weight: $bold;
+    color: $color-light;
+    letter-spacing: 6px;
+    margin-bottom: 2rem;
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  .live-counting {
+    .counter {
+        width: 10rem;
+        height: 12rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      border-radius: 0.8rem;
+      background-color: $color-shade-blue-light;
+      text-align: center;
+
+      &.ampm{
+        width: 60px;
+        height: 40px;
+        border-radius: 4px;
+        margin-top: auto;
+      }
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+
+      h3 {
+        font-size: 5.6rem;
+        color: $color-light;
+      }
+      p {
+        font-weight: $semibold;
+        color: $color-grey;
+      }
+    }
+  }
+}
+
+/* -------------------------------------
+            Commingsoon Tablet
+------------------------------------- */
+@include tablet {
+  .commingsoon {
+    .bg-pattern {
+      left: -60rem;
+    }
+    .col-8,
+    .col-4 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .live-counting {
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+}
+
+/* -------------------------------------
+            Commingsoon Mobile
+------------------------------------- */
+@include mobile {
+  .commingsoon {
+    .bg-pattern{
+        left: 50%;
+    transform: translateX(-50%) !important;
+    }
+    .live-counting {
+      .counter {
+        width: 8rem;
+        height: 10rem;
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        h3 {
+          font-size: 3.6rem;
+        }
+      }
+    }
+  }
+}

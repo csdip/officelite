@@ -129,6 +129,7 @@ button,
   overflow: hidden;
   z-index: 1;
   transition: all 0.3s ease;
+  box-shadow: 0 14px 16px -4px rgba(0, 0, 0, 0.1);
 }
 
 button:hover,
@@ -361,7 +362,10 @@ button:hover,
 /* -------------------------------------
         Tablet Device 960px
 ------------------------------------- */
-@media (max-width: 960px) {
+/* -------------------------------------
+        Mobile Device 768px
+------------------------------------- */
+@media (max-width: 768px) {
   .col-1,
   .col-2,
   .col-3,
@@ -376,11 +380,6 @@ button:hover,
   .col-12 {
     width: 100%;
   }
-}
-/* -------------------------------------
-        Mobile Device 768px
-------------------------------------- */
-@media (max-width: 768px) {
   .container {
     padding: 0 2rem;
   }
@@ -402,16 +401,17 @@ button:hover,
 ------------------------------------- */
 .header {
   position: relative;
+  padding-bottom: 20rem;
 }
 .header .bg-pattern {
   position: absolute;
-  top: -310px;
-  right: -226px;
+  top: -31rem;
+  right: -22.6rem;
   z-index: -1;
   animation: rotate 180s infinite linear;
 }
 .header__logo {
-  padding: 100px 0;
+  padding: 8rem 0;
 }
 .header__text-content h1 {
   font-size: 5.6rem;
@@ -419,32 +419,80 @@ button:hover,
 .header__text-content p {
   margin: 2rem 0;
 }
-.header__img-container {
+.header__img-content {
   text-align: right;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 /* -------------------------------------
             Header Tablet
 ------------------------------------- */
+@media (max-width: 960px) {
+  .header .bg-pattern {
+    top: -28rem;
+    right: -37.6rem;
+    z-index: -1;
+    width: 100%;
+  }
+  .header__text-content h1 {
+    font-size: 4rem;
+  }
+  .header__text-content p {
+    font-size: 1.6rem;
+  }
+  .header__img-content img {
+    width: 100%;
+  }
+}
 /* -------------------------------------
             Header Mobile
 ------------------------------------- */
+@media (max-width: 768px) {
+  .header {
+    padding-bottom: 10rem;
+  }
+  .header .bg-pattern {
+    top: -22rem;
+    right: -25%;
+    transform: translateX(25%);
+    width: 150%;
+  }
+  .header__logo {
+    padding: 5rem 0;
+    text-align: center;
+  }
+  .header .left {
+    order: 2;
+  }
+  .header .right {
+    order: 1;
+  }
+  .header__text-content {
+    text-align: center;
+  }
+  .header__text-content h1 {
+    font-size: 3.8rem;
+  }
+  .header__img-content {
+    width: 70%;
+    margin-inline: auto;
+    margin-bottom: 4rem;
+  }
+}
 /* -------------------------------------
             Plane Desktop
 ------------------------------------- */
+.plane {
+  margin-bottom: -25rem;
+  position: relative;
+  z-index: 3;
+}
 .plane__single {
-  border-radius: 12px;
+  position: relative;
+  border-radius: 16px;
   box-shadow: 0 14px 16px -4px rgba(0, 0, 0, 0.1);
   padding: 40px;
   text-align: center;
+  background-color: #ffffff;
 }
 .plane__single--header {
   margin-bottom: 4rem;
@@ -462,6 +510,8 @@ button:hover,
 .plane__single--body li {
   font-size: 1.6rem;
   color: #747B95;
+}
+.plane__single--body li:not(:last-child) {
   margin-bottom: 3rem;
 }
 .plane__single .btn {
@@ -469,7 +519,17 @@ button:hover,
   color: #5175FF;
 }
 .plane__single.pro {
+  position: relative;
+  overflow: hidden;
   background-color: #5175FF;
+}
+.plane__single.pro .bg-pattern {
+  position: absolute;
+  top: -40.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .plane__single.pro h2, .plane__single.pro h4, .plane__single.pro li, .plane__single.pro p {
   color: #ffffff;
@@ -482,6 +542,139 @@ button:hover,
 /* -------------------------------------
             Plane Tablet
 ------------------------------------- */
+@media (max-width: 960px) {
+  .plane .col-4 {
+    width: 100%;
+  }
+  .plane__single {
+    margin-bottom: 3rem;
+    text-align: left;
+  }
+  .plane__single--body {
+    position: absolute;
+    top: 50%;
+    right: 4rem;
+    transform: translateY(-50%);
+  }
+  .plane__single.pro .bg-pattern {
+    left: -32rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 /* -------------------------------------
             Plane Mobile
-------------------------------------- *//*# sourceMappingURL=main.css.map */
+------------------------------------- */
+@media (max-width: 768px) {
+  .plane__single {
+    text-align: center;
+  }
+  .plane__single--body {
+    position: initial;
+    transform: none;
+  }
+  .plane__single.pro .bg-pattern {
+    top: -40rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+/* -------------------------------------
+            Commingsoon Desktop
+------------------------------------- */
+.commingsoon {
+  background-color: #25293A;
+  padding: 35rem 0 10rem 0;
+  position: relative;
+  z-index: 1;
+}
+.commingsoon .bg-pattern {
+  position: absolute;
+  top: -60rem;
+  left: -46.6rem;
+  z-index: -1;
+  animation: rotate 180s infinite linear;
+}
+.commingsoon .date {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 6px;
+  margin-bottom: 2rem;
+}
+.commingsoon .date span {
+  color: #5175FF;
+}
+.commingsoon .live-counting .counter {
+  width: 10rem;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  background-color: #333950;
+  text-align: center;
+}
+.commingsoon .live-counting .counter.ampm {
+  width: 60px;
+  height: 40px;
+  border-radius: 4px;
+  margin-top: auto;
+}
+.commingsoon .live-counting .counter:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.commingsoon .live-counting .counter h3 {
+  font-size: 5.6rem;
+  color: #ffffff;
+}
+.commingsoon .live-counting .counter p {
+  font-weight: 600;
+  color: #747B95;
+}
+
+/* -------------------------------------
+            Commingsoon Tablet
+------------------------------------- */
+@media (max-width: 960px) {
+  .commingsoon .bg-pattern {
+    left: -60rem;
+  }
+  .commingsoon .col-8,
+  .commingsoon .col-4 {
+    width: 100%;
+    text-align: center;
+  }
+  .live-counting {
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+}
+/* -------------------------------------
+            Commingsoon Mobile
+------------------------------------- */
+@media (max-width: 768px) {
+  .commingsoon .bg-pattern {
+    left: 50%;
+    transform: translateX(-50%) !important;
+  }
+  .commingsoon .live-counting .counter {
+    width: 8rem;
+    height: 10rem;
+  }
+  .commingsoon .live-counting .counter:not(:last-child) {
+    margin-right: 1rem;
+  }
+  .commingsoon .live-counting .counter h3 {
+    font-size: 3.6rem;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -81,8 +81,22 @@ span {
   line-height: 1;
   overflow: hidden;
   z-index: 1;
-  transition: all .3s ease;
+  transition: all .6s ease-in;
   box-shadow: $box-shadow;
+  
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: $color-light;
+    opacity: .2;
+    width: 0rem;
+    height: 0rem;
+    border-radius: 10rem;
+    transition: all .6s ease-in;
+  }
 }
 
 button,
@@ -92,7 +106,13 @@ button,
 
 button:hover,
 .btn:hover {
-  opacity: .8;
+  transform: scaleX(1.05);
+  
+  &::before{
+    width: 100rem;
+    height: 100rem;
+    transition: all .6s ease-in;
+  }
 }
 
 .container {

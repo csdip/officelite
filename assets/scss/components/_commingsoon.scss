@@ -19,28 +19,18 @@
   }
 
   .date {
-    text-transform: uppercase;
-    font-weight: $bold;
-    color: $color-light;
-    letter-spacing: 6px;
-    margin-bottom: 2rem;
 
+    @include date;
+    
     span {
       color: $color-primary;
     }
   }
-
+  
   .live-counting {
     .counter {
-        width: 10rem;
-        height: 12rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      border-radius: 0.8rem;
-      background-color: $color-shade-blue-light;
-      text-align: center;
+      @include counter;
+        
 
       &.ampm{
         width: 60px;
@@ -100,7 +90,7 @@
         height: 10rem;
 
         &:not(:last-child) {
-          margin-right: 1rem;
+          margin-right: .6rem;
         }
 
         h3 {

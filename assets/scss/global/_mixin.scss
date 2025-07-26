@@ -5,9 +5,38 @@
 /* -------------------------------------
             Mixin Desktop
 ------------------------------------- */
+@mixin date{
+      text-transform: uppercase;
+      font-weight: $bold;
+      color: $color-light;
+      letter-spacing: 6px;
+      margin-bottom: 2rem;
+    }
+
+
+    @mixin counter{
+          width: 10rem;
+        height: 12rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      border-radius: 0.8rem;
+      background-color: $color-shade-blue-light;
+      text-align: center;
+        }
 
 
 
+
+/* -------------------------------------
+        Large Screen 1440px
+------------------------------------- */
+@mixin lg {
+  @media (max-width: 1360px) {
+    @content;
+  }
+}
 
 
 

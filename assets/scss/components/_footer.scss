@@ -1,0 +1,78 @@
+@use "../utils/" as *;
+@use "../global/" as *;
+
+/* -------------------------------------
+            Footer Desktop
+------------------------------------- */
+.footer{
+
+    padding: 2rem 0;
+
+    p{
+        font-size: 1.6rem;
+        font-weight: $semibold;
+        
+        a{
+            font-size: 1.6rem;
+            color: $color-shade-blue;
+        }
+    }
+
+    &__socials{
+        text-align: right;
+        margin-top: -1rem;
+        li{
+
+            &:not(:last-child){
+                margin-right: 2rem;
+            }
+            a{
+                color: $color-shade-blue;
+                
+                i{
+                    font-size: 5rem;
+
+                }
+            }
+
+            img{
+                width: 2rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+
+/* -------------------------------------
+            Footer Tablet
+------------------------------------- */
+
+
+
+
+/* -------------------------------------
+            Footer Mobile
+------------------------------------- */
+@include mobile{
+    .footer{
+        &__logo{
+            width: 120px;
+
+            img{
+                width: 100%;
+            }
+        }
+        p{
+            display: none;
+        }
+
+        &__socials{
+            li{
+                &:not(:last-child){
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

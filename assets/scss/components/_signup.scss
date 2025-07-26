@@ -1,0 +1,232 @@
+@use "../utils/" as *;
+@use "../global/" as *;
+
+/* -------------------------------------
+            SignUp Desktop
+------------------------------------- */
+
+.logo {
+  padding: 8rem 0;
+}
+
+.signup {
+  position: relative;
+  padding-bottom: 30rem;
+  .right {
+    margin-right: -15rem;
+
+    @include lg{
+      margin-right: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50rem;
+      height: 100%;
+      background-color: $color-shade-blue;
+      z-index: -1;
+    }
+
+    .bg-pattern {
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      width: 70%;
+      animation: rotate 180s infinite linear;
+      transform: translateX(-50%);
+    }
+  }
+
+
+
+  h1 {
+    font-size: 5.6rem;
+  }
+  p {
+    margin: 3rem 0;
+  }
+
+  .commingsoon__timer {
+    .date {
+      @include date;
+      color: $color-secondary;
+
+      span {
+        color: $color-primary;
+      }
+    }
+
+    .live-counting {
+      .counter {
+        @include counter;
+        background-color: $color-light-blue;
+
+        &.ampm {
+          width: 60px;
+          height: 40px;
+          border-radius: 4px;
+          margin-top: auto;
+        }
+
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+        }
+
+        h3 {
+          font-size: 5.6rem;
+          color: $color-primary;
+        }
+        p {
+          font-weight: $semibold;
+          color: $color-grey;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  form {
+    border-radius: 1.6rem;
+    box-shadow: $box-shadow;
+    padding: 2rem 4rem;
+    background-color: $color-light;
+    position: relative;
+    width: 45rem;
+
+    .input {
+      width: 100%;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid $color-light-grey;
+      color: $color-secondary;
+      padding: 2.5rem 2rem;
+      font-size: 1.6rem;
+      font-family: $f-f-kumbh;
+      font-weight: $semibold;
+      color: $color-secondary;
+      background-color: $color-light;
+      
+      &::placeholder {
+        font-size: 1.6rem;
+        font-weight: $regular;
+        color: $color-light-grey;
+      }
+      
+      
+    }
+    
+    select{
+      font-weight: $semibold;
+      span{
+        color: $color-grey !important;
+      }
+    }
+    
+    option{
+      @extend .input;
+
+
+    }
+    .btn {
+      width: 100%;
+      display: block;
+      margin-top: 4rem;
+    }
+  }
+}
+
+/* -------------------------------------
+            SignUp Tablet
+------------------------------------- */
+@include tablet{
+  .signup{
+    padding-bottom: 0rem;
+
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+
+    .col-6{
+      width: 100%;
+    }
+
+    .left{
+      margin-bottom: 30rem;
+      text-align: center;
+    }
+
+    .right{
+      position: revert;
+
+      .bg-pattern{
+        top: 65rem;
+        left: 0;
+        width: 100%;
+      }
+
+      &::before{
+        width: 100%;
+        height: 40rem;
+        top: unset;
+        left: 0;
+      }
+
+      form{
+        margin-inline: auto;
+        margin-bottom: 12rem;
+        margin-top: -21rem;
+      }
+    }
+  }
+}
+
+/* -------------------------------------
+            SignUp Mobile
+------------------------------------- */
+@include mobile{
+  .logo{
+    padding: 4rem 0;
+  }
+  .signup{
+
+    .right{
+      .bg-pattern{
+        top: 75rem;
+        left: -25%;
+        width: 150%;
+      }
+    }
+    h1{
+      font-size: 3.8rem;
+  }
+    form{
+      width: 100%;
+      padding: 3rem;
+    }
+    
+    &__text-content{
+      .commingsoon__timer{
+        .live-counting {
+          .counter {
+            width: 8rem;
+            height: 10rem;
+    
+            &:not(:last-child) {
+              margin-right: .6rem;
+            }
+    
+            h3 {
+              font-size: 3.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
